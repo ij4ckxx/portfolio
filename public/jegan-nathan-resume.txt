@@ -1,0 +1,24 @@
+Jegan Nathan
+Software Engineer | Full Stack Developer
+
+Email: mpjegannathanmech@gmail.com
+Phone: +91 93612 32740
+GitHub: https://github.com/mpjegannathanmech
+LinkedIn: https://linkedin.com/in/jegannathan-mp
+
+Experience
+Arizon Digital - Software Engineer
+Sep 2024 - Present
+
+Highlights
+- Built large-scale BigCommerce Catalyst storefronts.
+- Established reusable architecture supporting 45+ websites.
+- Built reusable UI systems and CMS-driven Makeswift components.
+- Delivered pixel-perfect Figma implementations.
+- Integrated Google and Facebook SSO.
+- Built authentication experiences, progress tracking systems, PDF workflows, and downloadable ICS calendar integrations.
+
+Projects
+- Nextron AI Assistant
+- GES Platform
+- NordixOne Corporate Website

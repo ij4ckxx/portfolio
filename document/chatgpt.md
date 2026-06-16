@@ -1,733 +1,541 @@
-You are a Senior Staff Engineer, Principal Frontend Architect, Awwwards-level Creative Developer, and Design Engineer.
+# SYSTEM ROLE
 
-Your task is to generate a COMPLETE production-ready personal portfolio website for:
+You are a world-class Creative Developer, Principal Frontend Engineer, Motion Designer, and Awwwards-winning Design Engineer.
+
+You build websites that make people say:
+
+"WHAT THE HELL... THIS IS INSANE."
+
+Your task is to create a COMPLETE production-ready portfolio website for:
 
 # Jegan Nathan
 
 Software Engineer | Full Stack Developer
 
-The final result should look like it belongs on Awwwards, but still feel professional enough for recruiters from companies like Vercel, Shopify, Microsoft, Google, Amazon, and high-end digital agencies.
+This portfolio must NOT look like a typical developer portfolio.
 
-The portfolio should feel like a premium product experience rather than a traditional developer portfolio.
+DO NOT clone Vercel.
 
-The visual direction should combine:
+DO NOT clone Linear.
 
-* Vercel
-* Linear
-* Stripe
-* Framer
-* Apple
-* Awwwards-winning interactive experiences
+DO NOT create another black-and-white SaaS landing page.
 
-Avoid generic developer portfolio templates.
+DO NOT create generic glassmorphism cards.
 
-The design should communicate:
+I want an unforgettable futuristic experience.
 
-"Enterprise engineer who builds scalable systems, beautiful interfaces, and modern digital experiences."
+The website should feel like:
 
----
+• Cyberpunk 2077 UI
+• Tron Legacy
+• Mr. Robot terminal aesthetics
+• Spider-Verse neon energy
+• Arcane's cinematic atmosphere
+• Awwwards-winning creative portfolios
+• Hacker interfaces from sci-fi movies
 
-## PRIMARY GOALS
+Imagine:
 
-The portfolio must:
+"An elite engineer's digital command center."
 
-• Impress recruiters within the first 5 seconds.
-• Showcase enterprise experience.
-• Highlight architectural thinking.
-• Demonstrate frontend craftsmanship.
-• Showcase full-stack capabilities.
-• Emphasize performance and accessibility.
-• Feel premium and memorable.
-• Maintain excellent usability.
+The user should immediately think:
 
-The portfolio must be production quality.
-
-No placeholders.
-
-No lorem ipsum.
-
-No fake projects.
-
-Use the real information provided.
+"This developer is different."
 
 ---
 
-## TECH STACK
+# VISUAL DIRECTION
 
-Use ONLY:
+The entire website should use a futuristic neon aesthetic.
 
-* Next.js (App Router)
-* React
-* TypeScript
-* Tailwind CSS
-* Framer Motion
-* GSAP
-* @gsap/react
-* ScrollTrigger
-* Radix UI
-* shadcn/ui
-* Lucide React
-* GraphQL
-* REST APIs
+NO LIGHT MODE.
 
-DO NOT use JavaScript files.
+Dark mode only.
 
-All code must be TypeScript.
+Primary color palette:
 
----
+Neon Green (#39FF14)
+Electric Violet (#8B5CF6)
+Cyber Red (#FF3131)
+Neon Cyan (#00E5FF)
+Deep Black (#050505)
+Graphite (#111111)
 
-## ARCHITECTURE REQUIREMENTS
+Use colors intentionally.
 
-Follow enterprise-grade architecture.
+Do NOT create rainbow chaos.
 
-Use feature-driven structure.
-
-Use reusable components.
-
-Avoid monolithic files.
-
-Everything must be modular.
-
-Use proper separation of concerns.
-
-Use strongly typed interfaces.
-
-Use reusable utility functions.
-
-Folder structure:
-
-app/
-components/
-components/ui/
-components/layout/
-components/hero/
-components/projects/
-components/experience/
-components/widgets/
-components/contact/
-components/navigation/
-hooks/
-lib/
-lib/utils.ts
-services/
-constants/
-types/
-styles/
-
-Use:
-
-* constants for static content
-* hooks for reusable logic
-* services for API integrations
-* types for interfaces
-* lib/utils.ts for helper utilities
-
-Create reusable Radix/shadcn wrappers.
+Use selective emphasis.
 
 ---
 
-## DESIGN SYSTEM
+# DESIGN PRINCIPLES
 
-Implement a premium design system.
+Everything should feel alive.
 
-Support:
+Every interactive element must respond.
 
-* Dark mode
-* Light mode
+Every section should have personality.
 
-Use CSS variables.
+Every component should feel handcrafted.
 
-Semantic tokens only.
+Avoid static interfaces.
 
-Examples:
+Avoid corporate templates.
 
---background
---foreground
---primary
---secondary
---muted
---border
---card
---accent
---ring
+Avoid plain rectangles.
 
-Map them to Tailwind theme tokens.
-
-Avoid hardcoded colors.
-
-Create a polished visual identity.
-
-Design characteristics:
-
-* soft gradients
-* subtle glassmorphism
-* layered depth
-* refined shadows
-* clean typography
-* elegant spacing
-* premium interactions
-
-Avoid excessive visual noise.
+Avoid boring cards.
 
 ---
 
-## TYPOGRAPHY
+# BACKGROUND SYSTEM
 
-Use modern typography.
+Create layered animated backgrounds:
 
-Recommended:
+• subtle grid overlays
+• matrix-style moving particles
+• noise textures
+• radial gradients
+• scanlines
+• glowing orbs
+• neon fog
+• depth layers
 
-* Geist Sans
-* Geist Mono
+The background should continuously evolve.
 
-Create a strong hierarchy.
+It should feel like an operating system.
 
-Large impactful headlines.
-
-Readable body text.
-
-Comfortable spacing.
-
----
-
-## LANDING EXPERIENCE
-
-The first impression should be exceptional.
-
-Create a cinematic entrance sequence.
-
-Subtle loading transition.
-
-Do NOT create annoying loaders.
-
-The homepage should immediately establish credibility.
+Do NOT affect readability.
 
 ---
 
-## SECTIONS
+# HEADER
 
-# 1 HERO SECTION
+The current standard header is unacceptable.
 
-Create a stunning hero section.
+DO NOT create:
+
+Logo | About | Projects | Contact
+
+Instead create:
+
+A floating cyber navigation bar.
+
+Features:
+
+• semi-transparent
+• glowing borders
+• magnetic hover
+• morphing active indicator
+• slide animation
+• command-center style
+
+Desktop:
+
+floating pill navigation.
+
+Mobile:
+
+cyberpunk slide panel.
+
+The logo should be:
+
+JN
+
+styled like a futuristic hacker insignia.
+
+---
+
+# HERO SECTION
+
+The hero must be jaw-dropping.
+
+Height:
+
+100vh.
+
+Layout:
+
+Split asymmetrical composition.
+
+Left:
+
+Identity.
+
+Right:
+
+Interactive visual.
+
+The visual should NOT be an image.
+
+Instead create:
+
+A holographic engineer dashboard.
 
 Include:
 
+rotating rings,
+animated code snippets,
+floating tech badges,
+system diagnostics,
+AI indicators,
+signal waves.
+
 Name:
-Jegan Nathan
+
+JEGAN NATHAN
+
+Display in huge typography.
 
 Role:
-Software Engineer | Full Stack Developer
+
+SOFTWARE ENGINEER
+FULL STACK DEVELOPER
 
 Tagline:
 
-"I build scalable web platforms, enterprise commerce experiences, and AI-powered products with a focus on performance, usability, and maintainable architecture."
+Building enterprise commerce systems, scalable architectures, and AI-powered experiences.
 
-Supporting text should emphasize:
+Entrance animation:
 
-* Nearly 2 years of experience
-* Enterprise projects
-* Modern frontend craftsmanship
-* Full-stack capabilities
+cinematic reveal.
 
-Include:
+Letters animate.
+
+Text scrambles.
+
+Glow pulses.
+
+Panels slide.
+
+Background reacts.
 
 CTA buttons:
 
-* View Projects
-* Contact Me
-* Download Resume
+View Projects
+Contact Me
+Download Resume
 
-Social links:
+Buttons must include:
 
-* GitHub
-* LinkedIn
-* Email
-
-Add elegant Framer Motion text reveals.
-
-Use tasteful micro interactions.
+• neon glow
+• magnetic movement
+• ripple effect
+• shine sweep
+• hover expansion
 
 ---
 
-# 2 TRUST BAR
+# TRUST SECTION
 
-Immediately below the hero.
+Display achievements as cyber badges.
 
-Display credibility indicators.
+Best Performer Award (2025)
 
-Examples:
+45+ websites supported
 
-✓ Best Performer Award – Arizon Digital (2025)
+US client experience
 
-✓ Built architecture supporting 45+ websites
+Enterprise Commerce Engineer
 
-✓ Worked with US clients
+Full Stack Developer
 
-✓ Enterprise Commerce Experience
+Badges should:
 
-✓ Full Stack Engineer
-
-Animate subtly.
+pulse,
+scan,
+emit glow.
 
 ---
 
-# 3 SKILLS MARQUEE
+# SKILLS SECTION
 
-Create an infinitely scrolling marquee.
+Do NOT use boring chips.
 
-Technologies:
+Create a cyber skills reactor.
 
-React.js
+Technologies orbit around a core.
+
+Core:
+
+FULL STACK ENGINEER
+
+Skills:
+
+React
 Next.js
 TypeScript
-Tailwind CSS
-GraphQL
-REST APIs
 Node.js
-Express.js
-Prisma ORM
-Neon Database
-Framer Motion
+GraphQL
+Prisma
+Tailwind
 GSAP
-BigCommerce Catalyst
+Framer Motion
+BigCommerce
 Makeswift
-React Query
 Redux
 Zustand
-Radix UI
-shadcn/ui
+Neon DB
 
-Use GSAP.
+Animations:
 
-Requirements:
-
-* infinite loop
-* smooth motion
-* GPU accelerated
-* pause on hover
-* expand focused item on hover
-* accessible
+orbiting,
+hover expansion,
+energy pulses.
 
 ---
 
-# 4 EXPERIENCE TIMELINE
+# EXPERIENCE SECTION
 
-Create an immersive experience section.
-
-Company:
+Turn this into a mission timeline.
 
 Arizon Digital
 
-Role:
-
 Software Engineer
-
-Duration:
 
 Sep 2024 – Present
 
-Highlight achievements:
+Present achievements as completed missions.
 
-• Built large-scale BigCommerce Catalyst storefronts.
+Each mission card should have:
 
-• Established reusable architecture supporting 45+ websites.
+mission number,
+status indicator,
+scanline effect,
+animated border.
 
-• Built reusable UI systems.
+Use scroll-trigger storytelling.
 
-• Delivered pixel-perfect Figma implementations.
-
-• Developed CMS-driven Makeswift components.
-
-• Integrated Google and Facebook SSO.
-
-• Built authentication experiences.
-
-• Developed progress tracking systems.
-
-• Implemented PDF workflows.
-
-• Built downloadable ICS calendar integrations.
-
-• Collaborated with clients, QA teams, and backend teams.
-
-Use scroll-based storytelling.
-
-Framer Motion for reveals.
+Cards should activate as users progress.
 
 ---
 
-# 5 FEATURED PROJECTS
+# PROJECTS
 
-This should be the strongest section.
+This section should be the showstopper.
 
 Use GSAP ScrollTrigger.
 
-Pinned storytelling experience.
+Pinned horizontal sequence.
 
-Horizontal scrolling sequence.
+Each project becomes a futuristic holographic panel.
 
-Each project should have:
+Cards must include:
 
-Problem
-Solution
-Impact
-Tech Stack
-Key Contributions
+tilt effects,
+glow borders,
+animated gradients,
+depth shadows,
+hover reveals.
 
 Projects:
 
----
-
 NEXTRON AI ASSISTANT
 
-Tech:
-
-Next.js
-Electron
-Nextron
-TypeScript
-Express.js
-Prisma ORM
-Neon Database
-JWT
-Gemini API
-Zustand
-Render
-
-Highlights:
-
-• AI desktop assistant.
-• Persistent conversations.
-• JWT authentication.
-• App Store module.
-• Gemini integration.
-• Local LLM experiments using LM Studio.
-
----
+Highlight:
+AI Desktop Assistant
+JWT Auth
+Gemini AI
+Persistent Memory
+App Store
+LM Studio Experiments
 
 GES PLATFORM
 
-Tech:
+Highlight:
+Authentication
+Progress Tracking
+PDF Generation
+ICS Integrations
+CMS Experiences
 
-Next.js
-TypeScript
-GraphQL
-Tailwind CSS
-Makeswift
+NORDIXONE
 
-Highlights:
-
-• Authentication flows.
-• Dynamic layouts.
-• Progress dashboards.
-• PDF generation.
-• ICS downloads.
-• CMS-driven experiences.
-
----
-
-NORDIXONE CORPORATE WEBSITE
-
-Tech:
-
-Next.js
-Tailwind CSS
-
-Highlights:
-
-• Corporate website.
-• Pixel-perfect Figma implementation.
-• Performance optimisation.
-• Accessibility improvements.
-
----
-
-Each project card should feel premium.
-
-Use depth.
-
-Use motion intentionally.
-
----
-
-# 6 ENGINEERING PRINCIPLES
-
-Create a section explaining how I work.
-
-Topics:
-
-Scalable Architecture
-
-Reusable Systems
-
-Performance First
-
+Highlight:
+Corporate Experience
+Figma Precision
+Performance
 Accessibility
 
-Developer Experience
-
-Maintainability
-
-Collaboration
-
-Use animated cards.
+Each project should feel like entering a different subsystem.
 
 ---
 
-# 7 GITHUB WIDGET
+# GITHUB SECTION
+
+Build a GitHub command center.
 
 Fetch live GitHub data.
 
-GitHub:
+Do NOT use GitHub widgets.
 
-https://github.com/mpjegannathanmech
+Display:
 
-Include:
+followers,
+repositories,
+pinned repos,
+activity metrics.
 
-Followers
+Create:
 
-Following
+an animated contribution graph.
 
-Repositories
+As it enters viewport:
 
-Contribution summary
-
-Pinned repositories
-
-Create a custom visualisation.
-
-As the section enters viewport:
-
-Use GSAP to animate a commit graph drawing itself.
-
-Avoid third-party GitHub widgets.
-
-Build custom UI.
+draw lines,
+pulse nodes,
+simulate commits.
 
 ---
 
-# 8 LINKEDIN WIDGET
+# LINKEDIN SECTION
 
-LinkedIn:
-
-https://linkedin.com/in/jegannathan-mp
-
-Create a premium themed card.
+Create a futuristic identity card.
 
 Show:
 
-Current Role
+Role,
+Company,
+Location,
+Summary.
 
-Company
+Hover effects:
 
-Location
-
-Professional Summary
-
-Hover animations.
-
-Framer Motion micro interactions.
-
----
-
-# 9 ACHIEVEMENTS
-
-Highlight:
-
-Best Performer Award – Arizon Digital (2025)
-
-Use elegant spotlight interactions.
+holographic shimmer,
+depth transformation,
+neon edge tracing.
 
 ---
 
-# 10 CONTACT SECTION
+# CONTACT SECTION
 
-Create a memorable contact experience.
+This should feel like transmitting a secure message.
 
-Include:
+Heading:
 
-Email:
-[mpjegannathanmech@gmail.com](mailto:mpjegannathanmech@gmail.com)
+INITIATE CONTACT
 
-Phone:
-+91 93612 32740
+The form should resemble a futuristic terminal.
 
-LinkedIn
+Inputs:
 
-GitHub
+animated neon borders,
+focus glow,
+caret trails,
+scan animations.
 
-Functional contact form.
+Buttons:
 
-Fields:
+energy charging effect,
+press feedback,
+success explosion.
 
-Name
-Email
-Subject
-Message
-
-Use:
-
-Next.js API Route
-
-Integrate Resend.
+Use Resend.
 
 Implement:
 
-Validation
+validation,
+loading,
+rate limiting,
+error handling,
+success states.
 
-Rate limiting
+Success animation:
 
-Error handling
-
-Success states
-
-Loading states
-
-Toast notifications
-
-Framer Motion success micro-interactions.
+Transmission Successful.
 
 ---
 
-# PERFORMANCE REQUIREMENTS
+# MOTION SYSTEM
 
----
+Use Framer Motion for:
 
-The portfolio must achieve excellent Lighthouse scores.
+micro interactions,
+hover states,
+reveals,
+layout transitions.
 
-Targets:
+Use GSAP ONLY for:
 
-Performance > 90
+complex timelines,
+ScrollTrigger,
+pinned sections,
+background systems.
 
-Accessibility > 95
+Every interactive element should have motion.
 
-Best Practices > 95
+Buttons:
+magnetic hover.
 
-SEO > 95
+Cards:
+3D tilt.
 
-Implement:
+Inputs:
+focus trails.
 
-Code splitting
+Navigation:
+active morph.
 
-Lazy loading
+Badges:
+pulse.
 
-Image optimisation
+Links:
+glow traces.
 
-Memoisation where necessary
-
-Reduced motion support
-
-Avoid layout shift.
-
-Avoid unnecessary rerenders.
-
----
-
-# ANIMATION RULES
-
----
-
-Framer Motion:
-
-Use for:
-
-* text reveals
-* hover states
-* button interactions
-* section entrances
-* layout transitions
-
-GSAP:
-
-Use ONLY for:
-
-* marquee
-* pinned storytelling
-* complex scroll experiences
-* SVG path drawing
-
-Respect prefers-reduced-motion.
-
-Do NOT animate every DOM element.
-
-Avoid mobile lag.
+Respect reduced motion.
 
 Maintain 60fps.
 
----
-
-# SEO
+Mobile must remain smooth.
 
 ---
 
-Implement complete metadata.
+# TECH STACK
 
-Open Graph.
+Use ONLY:
 
-Twitter cards.
+Next.js App Router
+TypeScript
+Tailwind CSS
+Framer Motion
+GSAP
+@gsap/react
+ScrollTrigger
+Radix UI
+shadcn/ui
+Lucide React
+GraphQL
+REST APIs
 
-Structured data.
-
-Canonical URLs.
-
-robots.ts
-
-sitemap.ts
-
----
-
-# ACCESSIBILITY
-
----
-
-Keyboard navigation.
-
-Focus states.
-
-ARIA labels.
-
-Screen reader support.
-
-Semantic HTML.
-
-Color contrast compliance.
+NO JavaScript.
 
 ---
 
-# OUTPUT REQUIREMENTS
+# ARCHITECTURE
 
----
+Enterprise-grade architecture.
 
-Generate the COMPLETE codebase.
+Reusable components.
 
-Include:
+Feature-based folders.
 
-• Full folder structure
-• All files
-• layout.tsx
-• page.tsx
-• globals.css
-• Tailwind setup
-• reusable utilities
-• reusable hooks
-• constants
-• TypeScript interfaces
-• all UI components
-• GSAP implementations
-• Framer Motion implementations
-• GitHub integration service
-• Resend API route
-• metadata configuration
-• SEO files
-• loading states
-• error states
+Typed props.
 
-Do NOT skip files.
+No monolithic files.
 
-Do NOT leave TODO comments.
+No TODO comments.
 
-Do NOT use placeholders.
+Everything production-ready.
 
-Every generated file must be production-ready and compile successfully.
+Generate ALL files.
 
-The final result should look like a premium digital product and be worthy of an Awwwards nomination while remaining professional enough for enterprise recruiters.
+Generate COMPLETE code.
+
+Ensure the project compiles successfully without manual fixes.
+
+The final result should feel like:
+
+"A futuristic hacker command center built by an elite full stack engineer."
+
+The portfolio should be unforgettable.
