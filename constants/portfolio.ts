@@ -2,13 +2,13 @@ import type { Mission, Project } from "@/types/portfolio";
 
 export const profile = {
   name: "JEGAN NATHAN",
-  role: "SOFTWARE ENGINEER | FULL STACK DEVELOPER",
+  role: "SOFTWARE DEVELOPER | FULL STACK DEVELOPER",
   tagline:
     "Building enterprise commerce systems, scalable architectures, and AI-powered experiences.",
   email: "mpjegannathanmech@gmail.com",
   phone: "+91 93612 32740",
-  github: "https://github.com/mpjegannathanmech",
-  githubUser: "mpjegannathanmech",
+  github: "https://github.com/jegannathan-mp",
+  githubUser: "jegannathan-mp",
   linkedin: "https://linkedin.com/in/jegannathan-mp",
   resume: "/jegan-resume.pdf",
   company: "Arizon Digital",

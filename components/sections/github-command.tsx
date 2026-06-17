@@ -54,7 +54,7 @@ export function GitHubCommand() {
         </h2>
         <div className="mt-12 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="terminal-card">
-            <p className="font-mono text-cyber-green">$ github.fetch --user mpjegannathanmech</p>
+            <p className="font-mono text-cyber-green">$ github.fetch --user jegannathan-mp</p>
             <div className="mt-8 grid grid-cols-3 gap-3">
               <Metric label="Followers" value={data?.profile.followers ?? "..."} />
               <Metric label="Repos" value={data?.profile.public_repos ?? "..."} />
@@ -74,7 +74,7 @@ export function GitHubCommand() {
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            {(repos.length ? repos : fallbackRepos).slice(0, 4).map((repo) => (
+            {(repos.length ? repos : fallbackRepos).slice(0, 6).map((repo) => (
               <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="repo-card">
                 <h3 className="font-mono text-lg font-black uppercase text-white">{repo.name}</h3>
                 <p className="mt-4 min-h-16 text-sm leading-6 text-white/60">
@@ -113,7 +113,7 @@ const fallbackRepos = [
   {
     id: 1,
     name: "Signal loading",
-    html_url: "https://github.com/mpjegannathanmech",
+    html_url: "https://github.com/jegannathan-mp",
     description: "GitHub data will populate here when the API responds.",
     language: "TypeScript",
     stargazers_count: 0,
