@@ -10,7 +10,7 @@ export const profile = {
   github: "https://github.com/mpjegannathanmech",
   githubUser: "mpjegannathanmech",
   linkedin: "https://linkedin.com/in/jegannathan-mp",
-  resume: "/jegan-nathan-resume.txt",
+  resume: "/jegan-resume.pdf",
   company: "Arizon Digital",
   location: "India",
 };

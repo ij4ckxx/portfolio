@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { profile } from "@/constants/portfolio";
 
@@ -16,15 +16,20 @@ export function CyberNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 px-4">
-      <div className="mx-auto flex max-w-6xl items-center justify-between border border-cyber-cyan/25 bg-black/50 px-3 py-3 shadow-[0_0_40px_rgba(0,229,255,0.12)] backdrop-blur-xl">
-        <a href="#home" className="group flex items-center gap-3" aria-label="JN home">
-          <span className="relative grid size-11 place-items-center border border-cyber-green bg-cyber-green text-black shadow-[0_0_28px_rgba(57,255,20,0.35)]">
+    <header className="fixed inset-x-0 top-3 z-50 px-3 sm:top-4 sm:px-4">
+      <motion.div
+        initial={{ opacity: 0, y: -18 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="cyber-nav-frame mx-auto flex max-w-6xl items-center justify-between gap-3 overflow-hidden border border-cyber-cyan/25 bg-black/62 px-3 py-2.5 shadow-[0_0_40px_rgba(0,229,255,0.12)] backdrop-blur-xl"
+      >
+        <a href="#home" className="group flex min-w-0 items-center gap-3" aria-label="JN home">
+          <span className="relative grid size-10 shrink-0 place-items-center border border-cyber-green bg-cyber-green text-black shadow-[0_0_28px_rgba(57,255,20,0.35)] sm:size-11">
             <span className="font-mono text-sm font-black">JN</span>
-            <span className="absolute -right-1 -top-1 size-2 bg-cyber-red" />
+            <span className="absolute -right-1 -top-1 size-2 bg-cyber-red shadow-[0_0_14px_rgba(255,49,49,0.8)]" />
+            <span className="absolute inset-0 animate-ping border border-cyber-green/50" />
           </span>
-          <span className="hidden font-mono text-xs font-bold uppercase tracking-[0.28em] text-white/70 sm:block">
-            Command Center
+          <span className="hidden min-w-0 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-white/70 sm:block lg:text-xs lg:tracking-[0.24em]">
+            Jegan Command
           </span>
         </a>
 
@@ -34,9 +39,10 @@ export function CyberNav() {
               key={href}
               href={href}
               whileHover={{ y: -2 }}
-              className="relative px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white/65 transition hover:text-cyber-green"
+              className="group relative px-3 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-white/65 transition hover:text-cyber-green lg:px-4 lg:text-xs lg:tracking-[0.16em]"
             >
               {label}
+              <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-cyber-green transition group-hover:scale-x-100" />
             </motion.a>
           ))}
         </nav>
@@ -44,33 +50,34 @@ export function CyberNav() {
         <a
           href={profile.resume}
           download
-          className="hidden border border-cyber-green/50 px-4 py-2 font-mono text-xs font-black uppercase tracking-[0.16em] text-cyber-green transition hover:bg-cyber-green hover:text-black md:block"
+          className="hidden items-center gap-2 border border-cyber-green/50 px-3 py-2 font-mono text-[11px] font-black uppercase tracking-[0.12em] text-cyber-green transition hover:bg-cyber-green hover:text-black md:inline-flex lg:px-4 lg:text-xs"
         >
+          <Download size={14} />
           Resume
         </a>
 
         <button
           type="button"
-          className="grid size-11 place-items-center border border-cyber-cyan/40 text-cyber-cyan md:hidden"
+          className="grid size-10 shrink-0 place-items-center border border-cyber-cyan/40 text-cyber-cyan md:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle navigation"
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
-      </div>
+      </motion.div>
 
       {open ? (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mx-auto mt-2 grid max-w-6xl gap-2 border border-cyber-cyan/25 bg-black/85 p-4 backdrop-blur-xl md:hidden"
+          className="mx-auto mt-2 grid max-w-6xl gap-2 overflow-hidden border border-cyber-cyan/25 bg-black/88 p-3 backdrop-blur-xl md:hidden"
         >
           {nav.map(([label, href]) => (
             <a
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className="border border-white/10 px-4 py-4 font-mono text-sm font-black uppercase tracking-[0.18em] text-white"
+              className="border border-white/10 px-4 py-3.5 font-mono text-xs font-black uppercase tracking-[0.14em] text-white"
             >
               {label}
             </a>

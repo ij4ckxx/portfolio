@@ -25,7 +25,7 @@ export default function Home() {
           <div className="holo-card mx-auto max-w-6xl">
             <p className="section-kicker">LinkedIn Identity Card</p>
             <h2 id="identity-title" className="mt-3 text-4xl font-black uppercase leading-none text-white md:text-6xl">
-              Software Engineer at {profile.company}
+              Software Developer at {profile.company}
             </h2>
             <p className="mt-6 max-w-3xl leading-8 text-white/65">
               Full stack developer based in {profile.location}, focused on enterprise commerce,
