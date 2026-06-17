@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { profile } from "@/constants/portfolio";
 
@@ -22,9 +23,16 @@ export function CyberNav() {
         animate={{ opacity: 1, y: 0 }}
         className="cyber-nav-frame mx-auto flex max-w-6xl items-center justify-between gap-3 overflow-hidden border border-cyber-cyan/25 bg-black/62 px-3 py-2.5 shadow-[0_0_40px_rgba(0,229,255,0.12)] backdrop-blur-xl"
       >
-        <a href="#home" className="group flex min-w-0 items-center gap-3" aria-label="JN home">
-          <span className="relative grid size-10 shrink-0 place-items-center border border-cyber-green bg-cyber-green text-black shadow-[0_0_28px_rgba(57,255,20,0.35)] sm:size-11">
-            <span className="font-mono text-sm font-black">JN</span>
+        <a href="#home" className="group flex min-w-0 items-center gap-3" aria-label="Jegan Nathan home">
+          <span className="relative grid size-10 shrink-0 place-items-center overflow-hidden border border-cyber-green bg-black shadow-[0_0_28px_rgba(57,255,20,0.35)] sm:size-11">
+            <Image
+              src="/portfolio-logo.png"
+              alt=""
+              width={128}
+              height={128}
+              className="size-full object-cover object-top"
+              priority
+            />
             <span className="absolute -right-1 -top-1 size-2 bg-cyber-red shadow-[0_0_14px_rgba(255,49,49,0.8)]" />
             <span className="absolute inset-0 animate-ping border border-cyber-green/50" />
           </span>

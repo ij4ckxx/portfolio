@@ -1,12 +1,12 @@
 import { profile } from "@/constants/portfolio";
 import type { GitHubPayload, Repo } from "@/types/portfolio";
 
-export async function getGitHubPayload(): Promise<GitHubPayload> {
+export async function getGitHubPayload(userName = profile.githubUser): Promise<GitHubPayload> {
   const [profileResponse, repoResponse] = await Promise.all([
-    fetch(`https://api.github.com/users/${profile.githubUser}`, {
+    fetch(`https://api.github.com/users/${userName}`, {
       next: { revalidate: 3600 },
     }),
-    fetch(`https://api.github.com/users/${profile.githubUser}/repos?sort=updated&per_page=6`, {
+    fetch(`https://api.github.com/users/${userName}/repos?sort=updated&per_page=6`, {
       next: { revalidate: 3600 },
     }),
   ]);

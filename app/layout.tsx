@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/portfolio-favicon.png",
+    shortcut: "/portfolio-favicon.png",
+    apple: "/portfolio-favicon.png",
+  },
   openGraph: {
     title: "Jegan Nathan | Software Engineer",
     description:

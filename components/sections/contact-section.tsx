@@ -65,7 +65,7 @@ export function ContactSection() {
               TEL::{profile.phone}
             </a>
             <a className="block text-cyber-violet" href={profile.linkedin} target="_blank" rel="noreferrer">
-              LINKEDIN::jegannathan-mp
+              LINKEDIN::mpjegannathanmech
             </a>
           </div>
         </div>
