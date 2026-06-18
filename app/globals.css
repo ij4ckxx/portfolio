@@ -119,14 +119,54 @@ a {
   animation: intro-overlay-fade 2.3s ease forwards;
 }
 
-.intro-bubble-orbit {
+.intro-bubble-field {
   position: relative;
-  margin-bottom: -5rem;
-  animation: intro-bubble-rise 2.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  width: min(100vw, 32rem);
+  height: 100vh;
 }
 
-.intro-bubble-orbit::before,
-.intro-bubble-orbit::after {
+.intro-bubble-core,
+.intro-skill-bubble {
+  position: absolute;
+  left: 50%;
+  bottom: -5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(182, 108, 255, 0.55);
+  background:
+    radial-gradient(circle at 34% 25%, rgba(255, 255, 255, 0.38), transparent 22%),
+    radial-gradient(circle at 50% 70%, rgba(127, 60, 255, 0.58), rgba(7, 27, 102, 0.74));
+  box-shadow:
+    0 0 26px rgba(127, 60, 255, 0.48),
+    inset 0 0 24px rgba(75, 216, 255, 0.16);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(12px);
+}
+
+.intro-bubble-core {
+  width: 5.1rem;
+  height: 5.1rem;
+  margin-left: -2.55rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  animation: intro-core-rise 2.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.intro-skill-bubble {
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  margin-left: calc(var(--bubble-size) / -2);
+  transform: translate3d(var(--bubble-x), 0, 0);
+  animation: intro-skill-rise 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--bubble-index) * 95ms);
+}
+
+.intro-bubble-core::before,
+.intro-bubble-core::after {
   content: "";
   position: absolute;
   inset: -1.35rem;
@@ -138,25 +178,10 @@ a {
   animation: intro-bubble-ring 1.15s ease-in-out infinite alternate;
 }
 
-.intro-bubble-orbit::after {
+.intro-bubble-core::after {
   inset: -2.35rem;
   border-color: rgba(75, 216, 255, 0.32);
   animation-delay: 160ms;
-}
-
-.intro-bubble {
-  position: relative;
-  z-index: 1;
-  width: 5.5rem;
-  height: 5.5rem;
-  overflow: hidden;
-  border: 1px solid rgba(182, 108, 255, 0.78);
-  border-radius: 999px;
-  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.18), rgba(7, 27, 102, 0.72));
-  box-shadow:
-    0 0 36px rgba(127, 60, 255, 0.64),
-    0 0 86px rgba(75, 216, 255, 0.22);
-  animation: intro-bubble-pulse 680ms ease-in-out infinite alternate;
 }
 
 .hero-rise,
@@ -183,16 +208,16 @@ a {
   align-items: center;
   gap: 0.65rem;
   overflow: hidden;
-  border: 1px solid rgba(0, 217, 255, 0.28);
-  background: rgba(0, 0, 0, 0.62);
-  padding: 0.8rem 1rem;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.72rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 0 28px rgba(0, 217, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
 }
 
 .cyber-nav-frame {
@@ -236,6 +261,25 @@ a {
   pointer-events: none;
 }
 
+.apple-signal-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035)),
+    rgba(2, 5, 22, 0.58);
+  padding: 0.75rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 80px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(22px);
+}
+
+.apple-signal-chip {
+  min-height: 2.35rem;
+}
+
 .reactor-ring {
   animation: rotate 20s linear infinite;
 }
@@ -253,6 +297,7 @@ a {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 1.75rem;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
     radial-gradient(circle at 20% 0%, rgba(75, 216, 255, 0.12), transparent 22rem),
@@ -371,11 +416,17 @@ main > section {
 
 .project-pin-stage {
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(2rem, 6vh, 4.5rem);
 }
 
 .project-x-viewport {
-  overflow: hidden;
+  overflow: visible;
   margin-inline: calc(50% - 50vw);
+  padding-block: 0.75rem;
 }
 
 .project-x-track {
@@ -392,10 +443,111 @@ main > section {
 }
 
 .project-x-card {
-  min-height: 34rem;
+  min-height: clamp(30rem, 62vh, 35rem);
   height: 100%;
   isolation: isolate;
   transform-origin: center;
+}
+
+.github-signal {
+  position: relative;
+  min-height: 17rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(127, 60, 255, 0.2), transparent 9rem),
+    radial-gradient(circle at 50% 50%, rgba(75, 216, 255, 0.14), transparent 13rem),
+    rgba(255, 255, 255, 0.035);
+}
+
+.github-signal-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  width: 5.8rem;
+  height: 5.8rem;
+  place-items: center;
+  border: 1px solid rgba(182, 108, 255, 0.58);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.28), transparent 24%),
+    rgba(2, 5, 22, 0.72);
+  box-shadow:
+    0 0 42px rgba(127, 60, 255, 0.34),
+    inset 0 0 28px rgba(75, 216, 255, 0.12);
+  color: white;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.2rem;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+  animation: github-core-pulse 1.8s ease-in-out infinite alternate;
+}
+
+.github-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(75, 216, 255, 0.22);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.github-orbit-one {
+  width: 9rem;
+  height: 9rem;
+  animation: rotate 12s linear infinite;
+}
+
+.github-orbit-two {
+  width: 13rem;
+  height: 13rem;
+  border-color: rgba(127, 60, 255, 0.22);
+  animation: rotate 18s linear infinite reverse;
+}
+
+.github-orbit-three {
+  width: 17rem;
+  height: 17rem;
+  border-style: dashed;
+  border-color: rgba(182, 108, 255, 0.16);
+  animation: rotate 26s linear infinite;
+}
+
+.github-pulse-lines {
+  position: absolute;
+  inset: auto 1.25rem 1.25rem;
+  display: flex;
+  height: 5.5rem;
+  align-items: end;
+  justify-content: center;
+  gap: 0.38rem;
+  opacity: 0.72;
+}
+
+.github-pulse-lines span {
+  width: 0.28rem;
+  min-height: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(to top, var(--cyber-violet), var(--cyber-cyan));
+  box-shadow: 0 0 16px rgba(75, 216, 255, 0.25);
+  animation: github-line-pulse 1.35s ease-in-out infinite alternate;
+}
+
+.github-signal-particles span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--cyber-violet-hot);
+  box-shadow: 0 0 18px rgba(182, 108, 255, 0.75);
+  transform: rotate(var(--particle-angle)) translateX(7.5rem);
+  animation: github-particle-drift 2.8s ease-in-out infinite;
+  animation-delay: var(--particle-delay);
 }
 
 .project-x-card-glow {
@@ -423,11 +575,15 @@ main > section {
 @media (max-width: 899px) {
   .project-pin-stage {
     overflow: visible;
+    min-height: auto;
+    display: block;
+    padding-block: 0;
   }
 
   .project-x-viewport {
     margin-inline: 0;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 217, 255, 0.45) rgba(255, 255, 255, 0.06);
@@ -555,7 +711,7 @@ main > section {
   }
 }
 
-@keyframes intro-bubble-rise {
+@keyframes intro-core-rise {
   0% {
     transform: translate3d(0, 10rem, 0) scale(0.62);
     opacity: 0;
@@ -569,6 +725,24 @@ main > section {
   }
   100% {
     transform: translate3d(0, -102vh, 0) scale(0.42);
+    opacity: 0;
+  }
+}
+
+@keyframes intro-skill-rise {
+  0% {
+    transform: translate3d(var(--bubble-x), 9rem, 0) scale(0.72);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.96;
+  }
+  68% {
+    transform: translate3d(calc(var(--bubble-x) * 0.42), -52vh, 0) scale(1);
+    opacity: 0.84;
+  }
+  100% {
+    transform: translate3d(calc(var(--bubble-x) * -0.18), -104vh, 0) scale(0.54);
     opacity: 0;
   }
 }
@@ -595,6 +769,34 @@ main > section {
 @keyframes signal-pulse {
   to {
     transform: scaleY(1);
+  }
+}
+
+@keyframes github-core-pulse {
+  to {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow:
+      0 0 58px rgba(127, 60, 255, 0.48),
+      inset 0 0 34px rgba(75, 216, 255, 0.18);
+  }
+}
+
+@keyframes github-line-pulse {
+  to {
+    transform: scaleY(0.38);
+    opacity: 0.46;
+  }
+}
+
+@keyframes github-particle-drift {
+  0%,
+  100% {
+    opacity: 0.24;
+    transform: rotate(var(--particle-angle)) translateX(6.3rem) scale(0.72);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(calc(var(--particle-angle) + 18deg)) translateX(8.6rem) scale(1);
   }
 }
 

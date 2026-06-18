@@ -17,11 +17,9 @@ export function CyberNav() {
 
   return (
     <header className="fixed inset-x-0 top-3 z-50 px-3 sm:top-4 sm:px-4">
-      <div
-        className="cyber-nav-frame mx-auto flex max-w-6xl items-center justify-between gap-3 overflow-hidden border border-cyber-cyan/25 bg-black/62 px-3 py-2.5 shadow-[0_0_40px_rgba(0,229,255,0.12)] backdrop-blur-xl"
-      >
+      <div className="cyber-nav-frame mx-auto flex max-w-5xl items-center justify-between gap-3 overflow-hidden rounded-full border border-white/12 bg-white/[0.075] px-3 py-2 shadow-[0_18px_70px_rgba(0,0,0,0.26)] backdrop-blur-2xl">
         <a href="#home" className="group flex min-w-0 items-center gap-3" aria-label="Jegan Nathan home">
-          <span className="relative grid size-10 shrink-0 place-items-center overflow-hidden border border-cyber-cyan bg-black shadow-[0_0_28px_rgba(0,217,255,0.28)] sm:size-11">
+          <span className="relative grid size-9 shrink-0 place-items-center overflow-hidden rounded-full border border-white/20 bg-black/40 shadow-[0_0_28px_rgba(127,60,255,0.28)] sm:size-10">
             <Image
               src="/portfolio-logo.png"
               alt=""
@@ -30,11 +28,11 @@ export function CyberNav() {
               className="size-full object-cover object-top"
               priority
             />
-            <span className="absolute -right-1 -top-1 size-2 bg-cyber-green shadow-[0_0_14px_rgba(57,255,20,0.55)]" />
-            <span className="absolute inset-0 border border-cyber-cyan/50" />
+            <span className="absolute -right-0.5 -top-0.5 size-2 rounded-full bg-cyber-violet-hot shadow-[0_0_14px_rgba(182,108,255,0.75)]" />
+            <span className="absolute inset-0 rounded-full border border-cyber-cyan/35" />
           </span>
-          <span className="hidden min-w-0 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-white/70 sm:block lg:text-xs lg:tracking-[0.24em]">
-            Jegan Command
+          <span className="hidden min-w-0 text-sm font-semibold tracking-normal text-white/78 sm:block">
+            Jegan
           </span>
         </a>
 
@@ -43,10 +41,9 @@ export function CyberNav() {
             <a
               key={href}
               href={href}
-              className="group relative px-3 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-white/65 transition hover:-translate-y-0.5 hover:text-cyber-cyan lg:px-4 lg:text-xs lg:tracking-[0.16em]"
+              className="group relative rounded-full px-3.5 py-2 text-sm font-medium text-white/68 transition hover:bg-white/10 hover:text-white lg:px-4"
             >
               {label}
-              <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-cyber-cyan transition group-hover:scale-x-100" />
             </a>
           ))}
         </nav>
@@ -54,7 +51,7 @@ export function CyberNav() {
         <a
           href={profile.resume}
           download
-          className="hidden items-center gap-2 border border-cyber-cyan/50 px-3 py-2 font-mono text-[11px] font-black uppercase tracking-[0.12em] text-cyber-cyan transition hover:bg-cyber-cyan hover:text-black md:inline-flex lg:px-4 lg:text-xs"
+          className="hidden items-center gap-2 rounded-full border border-white/12 bg-white/10 px-3.5 py-2 text-sm font-semibold text-white/78 transition hover:bg-cyber-cyan hover:text-black md:inline-flex"
         >
           <Download size={14} />
           Resume
@@ -62,7 +59,7 @@ export function CyberNav() {
 
         <button
           type="button"
-          className="grid size-10 shrink-0 place-items-center border border-cyber-cyan/40 text-cyber-cyan md:hidden"
+          className="grid size-10 shrink-0 place-items-center rounded-full border border-white/12 bg-white/10 text-white/78 md:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle navigation"
         >
@@ -72,14 +69,14 @@ export function CyberNav() {
 
       {open ? (
         <div
-          className="mx-auto mt-2 grid max-w-6xl gap-2 overflow-hidden border border-cyber-cyan/25 bg-black/88 p-3 backdrop-blur-xl md:hidden"
+          className="mx-auto mt-2 grid max-w-5xl gap-2 overflow-hidden rounded-3xl border border-white/12 bg-white/[0.08] p-3 backdrop-blur-2xl md:hidden"
         >
           {nav.map(([label, href]) => (
             <a
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className="border border-white/10 px-4 py-3.5 font-mono text-xs font-black uppercase tracking-[0.14em] text-white"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm font-semibold text-white/82"
             >
               {label}
             </a>

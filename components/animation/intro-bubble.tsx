@@ -1,9 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
+import { skills } from "@/constants/portfolio";
 
-const STORAGE_KEY = "jegan-intro-bubble-v1";
+const STORAGE_KEY = "jegan-skill-bubbles-v1";
+const bubbleSkills = skills.slice(0, 8);
 
 export function IntroBubble() {
   const [show, setShow] = useState(false);
@@ -32,17 +34,23 @@ export function IntroBubble() {
 
   return (
     <div className="intro-bubble-overlay" aria-hidden="true">
-      <div className="intro-bubble-orbit">
-        <div className="intro-bubble">
-          <Image
-            src="/portfolio-logo.png"
-            alt=""
-            width={128}
-            height={128}
-            className="size-full object-cover object-top"
-            priority
-          />
-        </div>
+      <div className="intro-bubble-field">
+        {bubbleSkills.map((skill, index) => (
+          <div
+            key={skill}
+            className="intro-skill-bubble"
+            style={
+              {
+                "--bubble-index": index,
+                "--bubble-x": `${(index % 4) * 5.8 - 8.7}rem`,
+                "--bubble-size": `${3.35 + (index % 3) * 0.42}rem`,
+              } as CSSProperties
+            }
+          >
+            {skill.length > 8 ? skill.slice(0, 2) : skill}
+          </div>
+        ))}
+        <div className="intro-bubble-core">SKILLS</div>
       </div>
     </div>
   );

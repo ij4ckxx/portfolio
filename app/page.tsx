@@ -21,7 +21,7 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <GitHubCommand />
-        <section className="px-4 py-20" aria-labelledby="identity-title">
+        <section className="px-4 py-10" aria-labelledby="identity-title">
           <div className="holo-card mx-auto max-w-6xl">
             <p className="section-kicker">LinkedIn Identity Card</p>
             <h2 id="identity-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white md:text-4xl">
@@ -41,7 +41,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="px-4 py-20" aria-labelledby="award-title">
+        <section className="px-4 py-10" aria-labelledby="award-title">
           <div className="award-card mx-auto max-w-6xl">
             <p className="section-kicker">Achievement Unlocked</p>
             <h2 id="award-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white md:text-4xl">

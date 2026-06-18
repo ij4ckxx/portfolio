@@ -46,7 +46,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="px-4 py-24" aria-labelledby="contact-title">
+    <section id="contact" className="px-4 py-14" aria-labelledby="contact-title">
       <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="terminal-card">
           <p className="section-kicker">Secure Channel</p>

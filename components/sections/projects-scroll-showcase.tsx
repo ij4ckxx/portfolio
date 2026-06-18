@@ -96,10 +96,10 @@ export function ProjectsScrollShowcase({ projects }: ProjectsScrollShowcaseProps
 
         gsap.set(cards, {
           autoAlpha: 0,
-          rotateX: 8,
-          rotateY: -5,
-          scale: 0.92,
-          y: 72,
+          rotateX: 3,
+          rotateY: -2,
+          scale: 0.96,
+          y: 28,
         });
         gsap.set(highlights, { autoAlpha: 0, y: 18 });
         gsap.set(progress, { scaleX: 0.08 });
@@ -138,7 +138,7 @@ export function ProjectsScrollShowcase({ projects }: ProjectsScrollShowcaseProps
           ease: "none",
           scrollTrigger: {
             trigger: stage,
-            start: "center center",
+            start: "top top",
             end: () => `+=${Math.max(scrollDistance(), window.innerHeight)}`,
             pin: true,
             scrub: 0.9,
@@ -156,7 +156,7 @@ export function ProjectsScrollShowcase({ projects }: ProjectsScrollShowcaseProps
 
         cards.forEach((card) => {
           gsap.to(card, {
-            yPercent: -4,
+            yPercent: -1.5,
             ease: "none",
             scrollTrigger: {
               trigger: card,
@@ -182,10 +182,10 @@ export function ProjectsScrollShowcase({ projects }: ProjectsScrollShowcaseProps
   );
 
   return (
-    <div ref={stageRef} className="project-pin-stage mt-12">
+    <div ref={stageRef} className="project-pin-stage mt-8">
       <div className="mx-auto mb-5 flex max-w-6xl items-center justify-between gap-4 lg:px-4">
         <p className="font-mono text-xs font-black uppercase tracking-[0.2em] text-white/45">
-          Vertical scroll converts into horizontal travel
+          Scroll to scrub project signals
         </p>
         <p className="hidden font-mono text-xs font-black uppercase tracking-[0.2em] text-cyber-cyan sm:block">
           Scrub enabled

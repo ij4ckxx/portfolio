@@ -18,7 +18,7 @@ export function NeonButton({
   return (
     <Comp
       className={cn(
-        "group relative inline-flex min-h-11 items-center justify-center overflow-hidden rounded-none border px-4 py-2.5 font-mono text-[11px] font-black uppercase tracking-[0.14em] transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyber-cyan",
+        "group relative inline-flex min-h-11 items-center justify-center overflow-hidden rounded-full border px-4 py-2.5 text-[13px] font-semibold tracking-normal transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyber-cyan",
         "before:absolute before:inset-y-0 before:-left-1/2 before:w-1/2 before:skew-x-[-24deg] before:bg-white/30 before:opacity-0 before:transition before:duration-500 hover:before:left-[120%] hover:before:opacity-100",
         variant === "primary"
           ? "border-cyber-cyan bg-cyber-cyan text-black shadow-[0_0_32px_rgba(0,217,255,0.28)] hover:-translate-y-1 hover:shadow-[0_0_52px_rgba(0,217,255,0.42)]"

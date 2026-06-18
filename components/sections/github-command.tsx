@@ -1,6 +1,7 @@
 "use client";
 
 import { GitFork, Star } from "lucide-react";
+import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import type { GitHubPayload } from "@/types/portfolio";
 
@@ -72,18 +73,7 @@ function GitHubAccountPanel({ userName, url }: { userName: string; url: string }
           <Metric label="Repos" value={data?.profile.public_repos ?? "..."} />
           <Metric label="Following" value={data?.profile.following ?? "..."} />
         </div>
-        <div className="mt-8 grid grid-cols-12 gap-1">
-          {Array.from({ length: 96 }).map((_, index) => (
-            <span
-              key={index}
-              className="commit-node block aspect-square min-h-2 border border-cyber-cyan/20 bg-cyber-cyan/45"
-              style={{
-                opacity: index % 5 === 0 ? 1 : index % 3 === 0 ? 0.78 : 0.48,
-                boxShadow: index % 11 === 0 ? "0 0 18px rgba(0,217,255,.55)" : "none",
-              }}
-            />
-          ))}
-        </div>
+        <GitHubSignal userName={userName} />
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {repos.slice(0, 6).map((repo) => (
@@ -102,6 +92,40 @@ function GitHubAccountPanel({ userName, url }: { userName: string; url: string }
               </span>
             </div>
           </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function GitHubSignal({ userName }: { userName: string }) {
+  return (
+    <div className="github-signal mt-8" aria-label={`${userName} animated GitHub activity signal`}>
+      <div className="github-signal-core">
+        <span>{userName.slice(0, 2).toUpperCase()}</span>
+      </div>
+      <span className="github-orbit github-orbit-one" />
+      <span className="github-orbit github-orbit-two" />
+      <span className="github-orbit github-orbit-three" />
+      <div className="github-pulse-lines" aria-hidden="true">
+        {Array.from({ length: 18 }).map((_, index) => (
+          <span
+            key={index}
+            style={{ animationDelay: `${index * 90}ms`, height: `${28 + (index % 5) * 10}%` }}
+          />
+        ))}
+      </div>
+      <div className="github-signal-particles" aria-hidden="true">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <span
+            key={index}
+            style={
+              {
+                "--particle-angle": `${index * 36}deg`,
+                "--particle-delay": `${index * 140}ms`,
+              } as CSSProperties
+            }
+          />
         ))}
       </div>
     </div>
