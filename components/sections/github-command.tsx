@@ -1,13 +1,8 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GitFork, Star } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { GitHubPayload } from "@/types/portfolio";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const githubAccounts = [
   {
@@ -40,7 +35,6 @@ export function GitHubCommand() {
 
 function GitHubAccountPanel({ userName, url }: { userName: string; url: string }) {
   const [data, setData] = useState<GitHubPayload | null>(null);
-  const graph = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -59,29 +53,12 @@ function GitHubAccountPanel({ userName, url }: { userName: string; url: string }
     };
   }, [userName]);
 
-  useGSAP(
-    () => {
-      gsap.from(".commit-node", {
-        opacity: 0,
-        scale: 0,
-        stagger: 0.01,
-        duration: 0.35,
-        ease: "back.out(1.8)",
-        scrollTrigger: {
-          trigger: graph.current,
-          start: "top 80%",
-        },
-      });
-    },
-    { scope: graph, dependencies: [data] },
-  );
-
   const repos = data?.repos.length ? data.repos : getFallbackRepos(userName, url);
 
   return (
     <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
       <div className="terminal-card">
-        <p className="font-mono text-cyber-green">$ github.fetch --user {userName}</p>
+        <p className="font-mono text-cyber-cyan">$ github.fetch --user {userName}</p>
         <a
           href={url}
           target="_blank"
@@ -95,14 +72,14 @@ function GitHubAccountPanel({ userName, url }: { userName: string; url: string }
           <Metric label="Repos" value={data?.profile.public_repos ?? "..."} />
           <Metric label="Following" value={data?.profile.following ?? "..."} />
         </div>
-        <div ref={graph} className="mt-8 grid grid-cols-12 gap-1">
+        <div className="mt-8 grid grid-cols-12 gap-1">
           {Array.from({ length: 96 }).map((_, index) => (
             <span
               key={index}
-              className="commit-node block aspect-square min-h-2 border border-cyber-green/20 bg-cyber-green/45"
+              className="commit-node block aspect-square min-h-2 border border-cyber-cyan/20 bg-cyber-cyan/45"
               style={{
                 opacity: index % 5 === 0 ? 1 : index % 3 === 0 ? 0.78 : 0.48,
-                boxShadow: index % 11 === 0 ? "0 0 18px rgba(57,255,20,.65)" : "none",
+                boxShadow: index % 11 === 0 ? "0 0 18px rgba(0,217,255,.55)" : "none",
               }}
             />
           ))}

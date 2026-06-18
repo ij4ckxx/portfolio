@@ -24,7 +24,7 @@ export default function Home() {
         <section className="px-4 py-20" aria-labelledby="identity-title">
           <div className="holo-card mx-auto max-w-6xl">
             <p className="section-kicker">LinkedIn Identity Card</p>
-            <h2 id="identity-title" className="mt-3 text-4xl font-black uppercase leading-none text-white md:text-6xl">
+            <h2 id="identity-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white md:text-4xl">
               Software Developer at {profile.company}
             </h2>
             <p className="mt-6 max-w-3xl leading-8 text-white/65">
@@ -44,7 +44,7 @@ export default function Home() {
         <section className="px-4 py-20" aria-labelledby="award-title">
           <div className="award-card mx-auto max-w-6xl">
             <p className="section-kicker">Achievement Unlocked</p>
-            <h2 id="award-title" className="mt-3 text-4xl font-black uppercase leading-none text-white md:text-6xl">
+            <h2 id="award-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white md:text-4xl">
               Best Performer Award 2025
             </h2>
             <p className="mt-6 max-w-2xl leading-8 text-white/65">

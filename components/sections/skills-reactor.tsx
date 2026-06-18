@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { skills } from "@/constants/portfolio";
 
 export function SkillsReactor() {
@@ -12,7 +9,7 @@ export function SkillsReactor() {
           Full-stack systems orbiting a product engineering core.
         </h2>
         <div className="relative mx-auto mt-14 aspect-square max-w-[680px]">
-          <div className="absolute inset-[30%] grid place-items-center border border-cyber-green bg-cyber-green text-center text-black shadow-[0_0_80px_rgba(57,255,20,0.3)]">
+          <div className="absolute inset-[30%] grid place-items-center border border-cyber-cyan bg-cyber-cyan text-center text-black shadow-[0_0_80px_rgba(0,217,255,0.25)]">
             <span className="font-mono text-sm font-black uppercase tracking-[0.2em]">
               Full Stack
               <br />
@@ -28,14 +25,13 @@ export function SkillsReactor() {
             const y = 50 + Math.sin(angle) * radius;
 
             return (
-              <motion.div
+              <div
                 key={skill}
-                whileHover={{ scale: 1.16, zIndex: 10 }}
-                className="absolute -translate-x-1/2 -translate-y-1/2 border border-cyber-cyan/35 bg-black/75 px-3 py-2 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-white shadow-[0_0_24px_rgba(0,229,255,0.12)] backdrop-blur"
+                className="skill-node absolute -translate-x-1/2 -translate-y-1/2 border border-cyber-cyan/35 bg-black/75 px-3 py-2 font-mono text-[10px] font-black uppercase tracking-[0.12em] text-white shadow-[0_0_24px_rgba(0,229,255,0.12)]"
                 style={{ left: `${x}%`, top: `${y}%` }}
               >
                 {skill}
-              </motion.div>
+              </div>
             );
           })}
         </div>

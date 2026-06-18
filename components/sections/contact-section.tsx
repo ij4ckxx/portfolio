@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { toast } from "sonner";
@@ -51,14 +50,14 @@ export function ContactSection() {
       <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="terminal-card">
           <p className="section-kicker">Secure Channel</p>
-          <h2 id="contact-title" className="mt-3 text-5xl font-black uppercase leading-none text-white">
+          <h2 id="contact-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl">
             Initiate Contact
           </h2>
           <p className="mt-6 leading-7 text-white/65">
             Send a message to discuss engineering roles, product builds, frontend systems, or full-stack work.
           </p>
           <div className="mt-8 space-y-3 font-mono text-sm">
-            <a className="block text-cyber-green" href={`mailto:${profile.email}`}>
+            <a className="block text-cyber-cyan" href={`mailto:${profile.email}`}>
               MAIL::{profile.email}
             </a>
             <a className="block text-cyber-cyan" href={`tel:${profile.phone.replaceAll(" ", "")}`}>
@@ -70,11 +69,8 @@ export function ContactSection() {
           </div>
         </div>
 
-        <motion.form
+        <form
           onSubmit={submit}
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           className="terminal-card"
         >
           <div className="grid gap-4 md:grid-cols-2">
@@ -89,7 +85,7 @@ export function ContactSection() {
           <NeonButton className="mt-5 w-full sm:w-auto" disabled={loading}>
             {loading ? "Transmitting..." : "Transmit Message"} <Send size={16} />
           </NeonButton>
-        </motion.form>
+        </form>
       </div>
     </section>
   );
