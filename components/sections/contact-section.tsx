@@ -1,49 +1,30 @@
 "use client";
 
 import { Send } from "lucide-react";
-import { FormEvent, useState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { toast } from "sonner";
-import { z } from "zod";
+import { sendContactMessage, type ContactFormState } from "@/app/actions/contact";
 import { NeonButton } from "@/components/ui/neon-button";
 import { profile } from "@/constants/portfolio";
 
-const schema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  subject: z.string().min(3),
-  message: z.string().min(10),
-});
+const initialState: ContactFormState = {
+  status: "idle",
+  message: "",
+};
 
 export function ContactSection() {
-  const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [state, formAction, pending] = useActionState(sendContactMessage, initialState);
 
-  async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const parsed = schema.safeParse(Object.fromEntries(new FormData(form)));
-
-    if (!parsed.success) {
-      toast.error("Transmission blocked. Check every field.");
-      return;
+  useEffect(() => {
+    if (state.status === "idle") return;
+    if (state.status === "success") {
+      toast.success(state.message);
+      formRef.current?.reset();
+    } else {
+      toast.error(state.message);
     }
-
-    setLoading(true);
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(parsed.data),
-      });
-      const payload = (await response.json()) as { message: string };
-      if (!response.ok) throw new Error(payload.message);
-      toast.success("Transmission successful.");
-      form.reset();
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Transmission failed.");
-    } finally {
-      setLoading(false);
-    }
-  }
+  }, [state]);
 
   return (
     <section id="contact" className="px-4 py-10" aria-labelledby="contact-title">
@@ -70,7 +51,8 @@ export function ContactSection() {
         </div>
 
         <form
-          onSubmit={submit}
+          ref={formRef}
+          action={formAction}
           className="glass-mobile-card terminal-card"
         >
           <div className="grid gap-4 md:grid-cols-2">
@@ -82,8 +64,8 @@ export function ContactSection() {
             <span className="field-label">MESSAGE PAYLOAD</span>
             <textarea name="message" rows={7} className="cyber-input resize-none" required />
           </label>
-          <NeonButton className="mt-5 w-full sm:w-auto" disabled={loading}>
-            {loading ? "Transmitting..." : "Transmit Message"} <Send size={16} />
+          <NeonButton type="submit" className="mt-5 w-full sm:w-auto" disabled={pending}>
+            {pending ? "Transmitting..." : "Transmit Message"} <Send size={16} />
           </NeonButton>
         </form>
       </div>
