@@ -46,9 +46,9 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="px-4 py-14" aria-labelledby="contact-title">
+    <section id="contact" className="px-4 py-10" aria-labelledby="contact-title">
       <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="terminal-card">
+        <div className="glass-mobile-card terminal-card">
           <p className="section-kicker">Secure Channel</p>
           <h2 id="contact-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white sm:text-4xl">
             Initiate Contact
@@ -71,7 +71,7 @@ export function ContactSection() {
 
         <form
           onSubmit={submit}
-          className="terminal-card"
+          className="glass-mobile-card terminal-card"
         >
           <div className="grid gap-4 md:grid-cols-2">
             <Field name="name" label="IDENTITY" />

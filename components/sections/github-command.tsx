@@ -18,13 +18,13 @@ const githubAccounts = [
 
 export function GitHubCommand() {
   return (
-    <section id="github" className="px-4 py-24" aria-labelledby="github-title">
+    <section id="github" className="px-4 py-14" aria-labelledby="github-title">
       <div className="mx-auto max-w-6xl">
         <p className="section-kicker">GitHub Command Center</p>
         <h2 id="github-title" className="section-title">
           Live repository signal with simulated commit telemetry.
         </h2>
-        <div className="mt-12 grid gap-8">
+        <div className="mt-8 grid gap-6">
           {githubAccounts.map((account) => (
             <GitHubAccountPanel key={account.userName} {...account} />
           ))}
@@ -58,7 +58,7 @@ function GitHubAccountPanel({ userName, url }: { userName: string; url: string }
 
   return (
     <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-      <div className="terminal-card">
+      <div className="glass-mobile-card terminal-card">
         <p className="font-mono text-cyber-cyan">$ github.fetch --user {userName}</p>
         <a
           href={url}
@@ -77,7 +77,7 @@ function GitHubAccountPanel({ userName, url }: { userName: string; url: string }
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {repos.slice(0, 6).map((repo) => (
-          <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="repo-card">
+          <a key={repo.id} href={repo.html_url} target="_blank" rel="noreferrer" className="glass-mobile-card repo-card">
             <h3 className="font-mono text-lg font-black uppercase text-white">{repo.name}</h3>
             <p className="mt-4 min-h-16 text-sm leading-6 text-white/60">
               {repo.description ?? "Public repository signal from the GitHub API."}

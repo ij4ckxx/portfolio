@@ -1,7 +1,9 @@
 import { CyberBackground } from "@/components/background/cyber-background";
 import { HeroSection } from "@/components/hero/hero-section";
 import { CyberNav } from "@/components/navigation/cyber-nav";
+import { AboutSection } from "@/components/sections/about-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { CredentialsSection } from "@/components/sections/credentials-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { GitHubCommand } from "@/components/sections/github-command";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -17,12 +19,12 @@ export default function Home() {
       <main>
         <HeroSection />
         <TrustSection />
+        <AboutSection />
         <SkillsReactor />
         <ExperienceSection />
         <ProjectsSection />
-        <GitHubCommand />
-        <section className="px-4 py-10" aria-labelledby="identity-title">
-          <div className="holo-card mx-auto max-w-6xl">
+        <section className="px-4 py-7" aria-labelledby="identity-title">
+          <div className="glass-mobile-card holo-card mx-auto max-w-6xl">
             <p className="section-kicker">LinkedIn Identity Card</p>
             <h2 id="identity-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white md:text-4xl">
               Software Developer at {profile.company}
@@ -41,8 +43,8 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="px-4 py-10" aria-labelledby="award-title">
-          <div className="award-card mx-auto max-w-6xl">
+        <section className="px-4 py-7" aria-labelledby="award-title">
+          <div className="glass-mobile-card award-card mx-auto max-w-6xl">
             <p className="section-kicker">Achievement Unlocked</p>
             <h2 id="award-title" className="mt-3 text-3xl font-black uppercase leading-tight text-white md:text-4xl">
               Best Performer Award 2025
@@ -52,6 +54,8 @@ export default function Home() {
             </p>
           </div>
         </section>
+        <CredentialsSection />
+        <GitHubCommand />
         <ContactSection />
       </main>
     </>

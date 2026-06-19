@@ -33,8 +33,7 @@ export function HeroSection() {
           </div>
 
           <p className="hero-rise mt-7 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8 [animation-delay:550ms]">
-            {profile.tagline} Nearly 2 years of enterprise delivery across Catalyst storefronts,
-            Makeswift systems, authentication flows, and AI product experiments.
+            {profile.summary}
           </p>
 
           <div className="hero-rise mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap [animation-delay:680ms]">

@@ -310,6 +310,17 @@ a {
   contain: paint;
 }
 
+.mission-card,
+.terminal-card,
+.holo-card,
+.award-card,
+.repo-card,
+.apple-signal-panel {
+  animation: section-card-rise both;
+  animation-timeline: view();
+  animation-range: entry 6% cover 28%;
+}
+
 .mission-card {
   min-height: 18rem;
   padding: clamp(1.2rem, 3vw, 1.8rem);
@@ -416,17 +427,17 @@ main > section {
 
 .project-pin-stage {
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: clamp(2rem, 6vh, 4.5rem);
+  padding-block: clamp(1.25rem, 4vh, 3rem);
 }
 
 .project-x-viewport {
   overflow: visible;
   margin-inline: calc(50% - 50vw);
-  padding-block: 0.75rem;
+  padding-block: 0.65rem;
 }
 
 .project-x-track {
@@ -443,7 +454,7 @@ main > section {
 }
 
 .project-x-card {
-  min-height: clamp(30rem, 62vh, 35rem);
+  min-height: clamp(28rem, 58vh, 34rem);
   height: 100%;
   isolation: isolate;
   transform-origin: center;
@@ -573,34 +584,42 @@ main > section {
 }
 
 @media (max-width: 899px) {
+  .projects-pin-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .project-pin-stage {
-    overflow: visible;
     min-height: auto;
     display: block;
+    overflow: visible;
     padding-block: 0;
   }
 
   .project-x-viewport {
     margin-inline: 0;
-    overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 217, 255, 0.45) rgba(255, 255, 255, 0.06);
+    overflow: visible;
+    padding-block: 0;
   }
 
   .project-x-track {
+    display: grid;
     width: auto;
+    gap: 1rem;
     padding-inline: 0;
   }
 
   .project-x-item {
-    flex-basis: min(88vw, 34rem);
-    scroll-snap-align: start;
+    min-width: 0;
+    perspective: none;
   }
 
   .project-x-card {
     min-height: auto;
+    height: auto;
+    animation: section-card-rise both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 30%;
   }
 }
 
@@ -660,6 +679,10 @@ main > section {
   animation: signal-pulse 900ms ease-in-out infinite alternate;
   transform: scaleY(0.42);
   will-change: transform;
+}
+
+.glass-mobile-card {
+  transform: translateZ(0);
 }
 
 @keyframes rotate {
@@ -772,6 +795,19 @@ main > section {
   }
 }
 
+@keyframes section-card-rise {
+  from {
+    opacity: 0.35;
+    filter: blur(8px);
+    transform: translate3d(0, 24px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 @keyframes github-core-pulse {
   to {
     transform: translate(-50%, -50%) scale(1.05);
@@ -845,6 +881,10 @@ main > section {
 }
 
 @media (max-width: 640px) {
+  main > section {
+    contain-intrinsic-size: 1px 680px;
+  }
+
   .section-title {
     font-size: clamp(1.55rem, 8vw, 2.25rem);
     line-height: 1.08;
@@ -854,6 +894,57 @@ main > section {
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+
+  .glass-mobile-card {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035)),
+      radial-gradient(circle at 50% 0%, rgba(127, 60, 255, 0.12), transparent 16rem),
+      rgba(2, 5, 22, 0.62) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 18px 52px rgba(0, 0, 0, 0.24) !important;
+    backdrop-filter: blur(22px) saturate(1.12);
+    animation-name: mobile-glass-rise;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 32%;
+  }
+
+  .mission-card,
+  .terminal-card,
+  .holo-card,
+  .award-card,
+  .repo-card {
+    border-radius: 1.35rem;
+  }
+
+  .project-x-card {
+    min-height: auto;
+    max-height: none;
+    padding: 1.05rem;
+  }
+
+  .project-x-track {
+    gap: 0.9rem;
+  }
+
+  .project-highlight {
+    padding: 0.85rem;
+  }
+}
+
+@keyframes mobile-glass-rise {
+  from {
+    opacity: 0.35;
+    filter: blur(10px);
+    transform: translate3d(0, 28px, 0) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
@@ -865,5 +956,15 @@ main > section {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .mission-card,
+  .terminal-card,
+  .holo-card,
+  .award-card,
+  .repo-card,
+  .apple-signal-panel,
+  .glass-mobile-card {
+    animation: none !important;
   }
 }

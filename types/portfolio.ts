@@ -4,12 +4,28 @@ export type Project = {
   summary: string;
   highlights: string[];
   stack: string[];
+  links?: {
+    label: string;
+    href: string;
+  }[];
 };
 
 export type Mission = {
   id: string;
   title: string;
   detail: string;
+};
+
+export type SkillCategory = {
+  title: string;
+  items: string[];
+};
+
+export type Credential = {
+  title: string;
+  issuer: string;
+  detail: string;
+  href?: string;
 };
 
 export type Repo = {

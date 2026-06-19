@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jegan-nathan.dev"),
-  title: "Jegan Nathan | Futuristic Full Stack Portfolio",
+  metadataBase: new URL("https://ijackx-portfolio.vercel.app"),
+  title: "Jegan Nathan M P | Software Developer & Full Stack Developer",
   description:
-    "A futuristic hacker command-center portfolio for Jegan Nathan, Software Engineer and Full Stack Developer.",
+    "Software Developer and Full Stack Developer building enterprise commerce systems with Next.js, TypeScript, React, GraphQL, BigCommerce Catalyst, Makeswift, and AI integrations.",
   alternates: {
     canonical: "/",
   },
@@ -28,21 +28,23 @@ export const metadata: Metadata = {
     apple: "/portfolio-favicon.png",
   },
   openGraph: {
-    title: "Jegan Nathan | Software Engineer",
+    title: "Jegan Nathan M P | Software Developer",
     description:
-      "Enterprise commerce systems, scalable architectures, AI-powered products, and cinematic frontend craft.",
+      "Enterprise commerce systems, scalable architectures, AI-powered products, and modern full-stack development.",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jegan Nathan | Software Engineer",
+    title: "Jegan Nathan M P | Software Developer",
     description:
       "A futuristic command-center portfolio for a full stack engineer.",
   },
   keywords: [
     "Jegan Nathan",
+    "Jegan Nathan M P",
     "Software Engineer",
+    "Software Developer",
     "Full Stack Developer",
     "Next.js",
     "React",

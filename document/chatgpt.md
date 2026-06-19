@@ -1,541 +1,329 @@
-# SYSTEM ROLE
+# Portfolio Update Prompt for Codex
 
-You are a world-class Creative Developer, Principal Frontend Engineer, Motion Designer, and Awwwards-winning Design Engineer.
+You are a senior frontend engineer and portfolio content strategist. Update my portfolio website using the resume details below. The goal is to make my portfolio look professional for Software Developer, Full Stack Developer, React Developer, and Next.js Developer roles.
 
-You build websites that make people say:
+Do not invent fake experience. Use only the information provided here. Improve the wording where needed, but keep the meaning accurate.
 
-"WHAT THE HELL... THIS IS INSANE."
+## Personal Details
 
-Your task is to create a COMPLETE production-ready portfolio website for:
-
-# Jegan Nathan
-
-Software Engineer | Full Stack Developer
-
-This portfolio must NOT look like a typical developer portfolio.
-
-DO NOT clone Vercel.
-
-DO NOT clone Linear.
-
-DO NOT create another black-and-white SaaS landing page.
-
-DO NOT create generic glassmorphism cards.
-
-I want an unforgettable futuristic experience.
-
-The website should feel like:
-
-• Cyberpunk 2077 UI
-• Tron Legacy
-• Mr. Robot terminal aesthetics
-• Spider-Verse neon energy
-• Arcane's cinematic atmosphere
-• Awwwards-winning creative portfolios
-• Hacker interfaces from sci-fi movies
-
-Imagine:
-
-"An elite engineer's digital command center."
-
-The user should immediately think:
-
-"This developer is different."
-
----
-
-# VISUAL DIRECTION
-
-The entire website should use a futuristic neon aesthetic.
-
-NO LIGHT MODE.
-
-Dark mode only.
-
-Primary color palette:
-
-Neon Green (#39FF14)
-Electric Violet (#8B5CF6)
-Cyber Red (#FF3131)
-Neon Cyan (#00E5FF)
-Deep Black (#050505)
-Graphite (#111111)
-
-Use colors intentionally.
-
-Do NOT create rainbow chaos.
-
-Use selective emphasis.
-
----
-
-# DESIGN PRINCIPLES
-
-Everything should feel alive.
-
-Every interactive element must respond.
-
-Every section should have personality.
-
-Every component should feel handcrafted.
-
-Avoid static interfaces.
-
-Avoid corporate templates.
-
-Avoid plain rectangles.
-
-Avoid boring cards.
-
----
-
-# BACKGROUND SYSTEM
-
-Create layered animated backgrounds:
-
-• subtle grid overlays
-• matrix-style moving particles
-• noise textures
-• radial gradients
-• scanlines
-• glowing orbs
-• neon fog
-• depth layers
-
-The background should continuously evolve.
-
-It should feel like an operating system.
-
-Do NOT affect readability.
-
----
-
-# HEADER
-
-The current standard header is unacceptable.
-
-DO NOT create:
-
-Logo | About | Projects | Contact
-
-Instead create:
-
-A floating cyber navigation bar.
-
-Features:
-
-• semi-transparent
-• glowing borders
-• magnetic hover
-• morphing active indicator
-• slide animation
-• command-center style
-
-Desktop:
-
-floating pill navigation.
-
-Mobile:
-
-cyberpunk slide panel.
-
-The logo should be:
-
-JN
-
-styled like a futuristic hacker insignia.
-
----
-
-# HERO SECTION
-
-The hero must be jaw-dropping.
-
-Height:
-
-100vh.
-
-Layout:
-
-Split asymmetrical composition.
-
-Left:
-
-Identity.
-
-Right:
-
-Interactive visual.
-
-The visual should NOT be an image.
-
-Instead create:
-
-A holographic engineer dashboard.
-
-Include:
-
-rotating rings,
-animated code snippets,
-floating tech badges,
-system diagnostics,
-AI indicators,
-signal waves.
-
-Name:
-
-JEGAN NATHAN
-
-Display in huge typography.
+Name: Jegan Nathan M P
 
 Role:
-
-SOFTWARE ENGINEER
-FULL STACK DEVELOPER
+Software Developer | Full Stack Developer
 
 Tagline:
-
 Building enterprise commerce systems, scalable architectures, and AI-powered experiences.
 
-Entrance animation:
+Location:
+Chennai, India
 
-cinematic reveal.
+Email:
+[mpjegannathanmech@gmail.com](mailto:mpjegannathanmech@gmail.com)
 
-Letters animate.
+Phone:
++91 93612 32740
 
-Text scrambles.
+Portfolio:
+https://ijackx-portfolio.vercel.app
 
-Glow pulses.
+LinkedIn:
+https://www.linkedin.com/in/mpjegannathanmech
 
-Panels slide.
+GitHub:
+https://github.com/jegannathan-mp
+https://github.com/ij4ckxx
 
-Background reacts.
+## Main Positioning
 
-CTA buttons:
+Position me as a Software Developer and Full Stack Developer with nearly 2 years of experience building enterprise commerce systems, CMS-driven storefronts, and AI-powered applications.
 
+My strongest professional experience is in:
+
+* Next.js
+* TypeScript
+* React.js
+* GraphQL
+* REST APIs
+* BigCommerce Catalyst
+* Makeswift
+* Node.js
+* Express.js
+* Tailwind CSS
+* React Query
+* Performance optimization
+* Security fixes
+* Figma-to-production development
+
+## Hero Section
+
+Update the hero section with a professional developer-focused message.
+
+Suggested hero content:
+
+Title:
+Hi, I'm Jegan Nathan M P
+
+Subtitle:
+Software Developer | Full Stack Developer
+
+Description:
+I build enterprise commerce systems, CMS-driven storefronts, scalable frontend architectures, and AI-powered applications using Next.js, TypeScript, React, GraphQL, BigCommerce Catalyst, and modern full-stack technologies.
+
+Primary CTA:
 View Projects
-Contact Me
-Download Resume
 
-Buttons must include:
+Secondary CTA:
+Download Resume / Contact Me
 
-• neon glow
-• magnetic movement
-• ripple effect
-• shine sweep
-• hover expansion
+Make the hero section recruiter-friendly, clean, modern, and confidence-driven. Avoid childish or overly flashy wording.
 
----
+## About Section
 
-# TRUST SECTION
+Use this content:
 
-Display achievements as cyber badges.
+I'm a Software Developer with nearly 2 years of experience building enterprise commerce systems, CMS-driven storefronts, and AI-powered applications. I specialize in Next.js, TypeScript, React.js, GraphQL, REST APIs, BigCommerce Catalyst, Makeswift, Node.js, and Express.js.
 
-Best Performer Award (2025)
+I have hands-on experience converting Figma designs into production-ready user interfaces, building reusable UI systems, improving application performance, fixing security issues, and collaborating with clients, QA engineers, and backend developers.
 
-45+ websites supported
+My current work involves building and supporting large-scale eCommerce applications, dynamic CMS-driven pages, custom storefront features, PDF workflows, authentication flows, and performance-optimized frontend architectures.
 
-US client experience
+## Skills Section
 
-Enterprise Commerce Engineer
+Create a well-organized skills section. Use categories instead of one long list.
 
-Full Stack Developer
+Languages:
+JavaScript, TypeScript, HTML5, CSS3
 
-Badges should:
+Frontend:
+React.js, Next.js, Tailwind CSS, Radix UI, shadcn/ui, Framer Motion, GSAP Basics
 
-pulse,
-scan,
-emit glow.
+Backend:
+Node.js, Express.js, Next.js API Routes
 
----
+State Management:
+React Query, Redux, Zustand
 
-# SKILLS SECTION
+APIs and Databases:
+REST APIs, GraphQL, SQL, MySQL, PostgreSQL, Neon DB, Prisma ORM
 
-Do NOT use boring chips.
+Platforms and Tools:
+BigCommerce Catalyst, Makeswift, Git, GitHub, Azure Repos, Vercel, Netlify, Render
 
-Create a cyber skills reactor.
+AI Integration:
+Gemini API, Google AI SDK, LLM Integration, Prompt Engineering, LM Studio
 
-Technologies orbit around a core.
+## Experience Section
 
-Core:
+Add a professional experience section.
 
-FULL STACK ENGINEER
+Company:
+Arizon Digital - USA
 
-Skills:
+Role:
+Software Developer
 
-React
-Next.js
-TypeScript
-Node.js
-GraphQL
-Prisma
-Tailwind
-GSAP
-Framer Motion
-BigCommerce
-Makeswift
-Redux
-Zustand
-Neon DB
+Duration:
+Sep 2024 - Present
 
-Animations:
+Experience Summary:
+Working on enterprise BigCommerce Catalyst and Next.js projects using TypeScript, GraphQL, REST APIs, React Query, Tailwind CSS, Makeswift, Node.js, and Express.js.
 
-orbiting,
-hover expansion,
-energy pulses.
+Key responsibilities and achievements:
 
----
+* Built production-ready Next.js and TypeScript interfaces from Figma designs for enterprise commerce applications.
+* Improved application security by resolving customer ID exposure issues, applying Content Security Policy fixes, and configuring secure cookie behavior.
+* Optimized performance using reduced duplicate API calls, Promise.all, memoization, reusable utilities, and cleaner data-fetching patterns.
+* Refactored complex modules and resolved 50+ high-priority SonarQube/code quality issues related to complexity, repeated logic, and reusable function design.
+* Collaborated with clients, QA engineers, and backend developers to clarify requirements, validate functionality, and support production releases.
+* Worked on production support activities for critical project releases.
 
-# EXPERIENCE SECTION
+## Company Projects Section
 
-Turn this into a mission timeline.
+Create a section called "Professional Projects" or "Company Projects".
 
-Arizon Digital
+### Project 1: GES Exhibitor Portal and Show App
 
-Software Engineer
+Tech Stack:
+Next.js, TypeScript, GraphQL, REST APIs, BigCommerce Catalyst, Makeswift, Radix UI, jsPDF
 
-Sep 2024 – Present
+Project Description:
+GES is an event and exhibitor management platform with two major parts: an exhibitor portal and a BigCommerce-integrated Show App admin system. The exhibitor portal allows exhibitors to manage shows, booths, orders, microsites, product pages, forms, and account-related workflows. The Show App is used inside BigCommerce to manage region-specific and show-specific admin data.
 
-Present achievements as completed missions.
+Key Contributions:
 
-Each mission card should have:
+* Built core exhibitor portal modules including authentication, show pages, My Shows, account pages, profiles, orders, microsites, forms, headers, footers, and dynamic content sections.
+* Developed Product Listing Page (PLP) and Product Detail Page (PDP) interfaces aligned with Figma designs and enterprise commerce requirements.
+* Built booth management flows covering find, create, edit, delete, switch, and current booth handling with Radix UI dialogs and header-level booth controls.
+* Engineered dynamic microsite pages with API-driven and Makeswift CMS-managed section rendering.
+* Delivered downloadable iCalendar events, PDF workflows, label-form PDF exports, progress bars, and recommended product carousel support.
+* Contributed to Show App admin features inside BigCommerce, including UK catalog functionality, add-product flow with lock controls, and Quill-like content behavior.
+* Enhanced My Shows booth-to-cart flow by managing Order Now/View Cart redirections, booth-based cart selection, and shopping list API updates.
 
-mission number,
-status indicator,
-scanline effect,
-animated border.
+### Project 2: Belami Commerce Platform
 
-Use scroll-trigger storytelling.
+Tech Stack:
+Next.js, TypeScript, Tailwind CSS, React Query, BigCommerce Catalyst, Makeswift, Handlebars
 
-Cards should activate as users progress.
+Project Description:
+Belami is a large-scale commerce platform containing 45 websites with reusable storefront architecture, CMS-driven components, authentication flows, B2B customer registration, and site-specific customization.
 
----
+Key Contributions:
 
-# PROJECTS
+* Contributed to a large-scale commerce platform containing 45 websites, building reusable components and integrating storefronts with Makeswift CMS.
+* Completed 5 sites in a short timeline, adapting login, registration, B2B customer registration, and site-specific storefront flows.
+* Implemented Facebook and Google SSO login.
+* Customized transactional email templates using Handlebars.
+* Established reusable Tailwind CSS design patterns.
+* Improved order, authentication, address, and product listing pages using API and rendering optimizations.
 
-This section should be the showstopper.
+### Project 3: Prosoco
 
-Use GSAP ScrollTrigger.
+Tech Stack:
+Next.js, Tailwind CSS, Makeswift
 
-Pinned horizontal sequence.
+Project Description:
+Prosoco involved rapid development of reusable Makeswift components and custom Figma-based layouts for a commerce-focused web experience.
 
-Each project becomes a futuristic holographic panel.
+Key Contributions:
 
-Cards must include:
+* Created 15+ Makeswift components in a short timeline.
+* Built product carousels, progress bars, color carousels, before-after carousels, and custom Figma-based layouts.
+* Focused on reusable, CMS-editable components for non-technical content teams.
 
-tilt effects,
-glow borders,
-animated gradients,
-depth shadows,
-hover reveals.
+## Personal Projects Section
 
-Projects:
+Create a section called "Personal Projects".
 
-NEXTRON AI ASSISTANT
+### Project 1: Local Agent - Nextron AI Desktop Application
 
-Highlight:
-AI Desktop Assistant
-JWT Auth
-Gemini AI
-Persistent Memory
-App Store
-LM Studio Experiments
+Frontend:
+https://github.com/ij4ckxx/ai-app/
 
-GES PLATFORM
+Backend:
+https://github.com/ij4ckxx/local-agent-be
 
-Highlight:
-Authentication
-Progress Tracking
-PDF Generation
-ICS Integrations
-CMS Experiences
+Tech Stack:
+Nextron, Next.js, Electron, TypeScript, Express.js, PostgreSQL, Prisma ORM, Neon DB, Gemini API, Google AI SDK, Zustand, Render
 
-NORDIXONE
+Project Description:
+Local Agent is an AI-powered desktop application built with Nextron. It has a ChatGPT/Gemini-style UI, recent chats, project-based conversations, dark/light theme support, backend APIs, database persistence, and AI integration.
 
-Highlight:
-Corporate Experience
-Figma Precision
-Performance
-Accessibility
+Key Features:
 
-Each project should feel like entering a different subsystem.
+* Built an AI-powered desktop app using Nextron with a ChatGPT/Gemini-style user interface.
+* Added recent chats, project-based conversations, and dark/light theme support.
+* Integrated Gemini API and Google AI SDK for AI responses.
+* Explored local LLM workflows using LM Studio.
+* Designed backend APIs with Express.js, Prisma ORM, and PostgreSQL.
+* Used Neon DB for database hosting and Render for API hosting.
+* Built an App Store agent concept for converting user intent into Winget commands to list, install, uninstall, and update applications.
+* Planned file-system and developer automation features such as file creation, Git command automation, and package installation workflows.
 
----
+### Project 2: NordiXOne Corporate Website
 
-# GITHUB SECTION
+Live:
+https://nordixone.vercel.app/
 
-Build a GitHub command center.
+GitHub:
+https://github.com/ij4ckxx/nordixone
 
-Fetch live GitHub data.
+Tech Stack:
+Next.js, Tailwind CSS, Framer Motion
 
-Do NOT use GitHub widgets.
+Project Description:
+A responsive corporate website built in a 3-member team within 3 days using Next.js, Tailwind CSS, and Framer Motion.
 
-Display:
+Key Features:
 
-followers,
-repositories,
-pinned repos,
-activity metrics.
+* Delivered a responsive corporate website within 3 days.
+* Used Framer Motion for smooth animations.
+* Built clean responsive UI sections with Next.js and Tailwind CSS.
 
-Create:
+### Project 3: Portfolio Website
 
-an animated contribution graph.
+Live:
+https://ijackx-portfolio.vercel.app/
 
-As it enters viewport:
+GitHub:
+https://github.com/ij4ckxx/portfolio
 
-draw lines,
-pulse nodes,
-simulate commits.
+Tech Stack:
+Next.js, Framer Motion, GSAP
 
----
+Project Description:
+An animated developer portfolio built using Next.js, Framer Motion, and GSAP to showcase projects, skills, and experience.
 
-# LINKEDIN SECTION
+## Achievements Section
 
-Create a futuristic identity card.
+Add an achievements section.
 
-Show:
+Achievement:
+Best Performer Award - Arizon Digital - September 2025
 
-Role,
-Company,
-Location,
-Summary.
+## Certifications Section
 
-Hover effects:
+Add a certifications section with credential links.
 
-holographic shimmer,
-depth transformation,
-neon edge tracing.
+React Basics - Coursera
+https://www.coursera.org/account/accomplishments/verify/F5QBGTRUKZDT
 
----
+Programming with JavaScript - Coursera
+https://www.coursera.org/account/accomplishments/verify/AVDVF9RT22KV
 
-# CONTACT SECTION
+Introduction to Front-End Development - Coursera
+https://www.coursera.org/account/accomplishments/verify/C49B2WKNQ5U8
 
-This should feel like transmitting a secure message.
+## Education Section
 
-Heading:
+MERN Stack Development
+KGiSL Institute of Technology
+Mar 2024 - Jul 2024
 
-INITIATE CONTACT
+Bachelor of Engineering - Mechanical Engineering
+SACS MAVMM Engineering College, Anna University, Madurai
+2019 - 2023
 
-The form should resemble a futuristic terminal.
+## Portfolio UI Requirements
 
-Inputs:
+Update the portfolio with a clean, modern, professional design suitable for recruiters.
 
-animated neon borders,
-focus glow,
-caret trails,
-scan animations.
+Design style:
 
-Buttons:
+* Dark modern developer theme
+* Premium software engineer portfolio style
+* Smooth animations but not too distracting
+* Clean typography
+* Good spacing
+* Mobile responsive
+* Fast loading
+* Recruiter-friendly
+* Easy to scan
 
-energy charging effect,
-press feedback,
-success explosion.
+Important:
 
-Use Resend.
+* Do not make it look like a student portfolio.
+* Highlight enterprise project experience.
+* Highlight BigCommerce Catalyst, Next.js, TypeScript, GraphQL, Makeswift, and AI desktop app work.
+* Keep content concise but meaningful.
+* Avoid too much paragraph text.
+* Use cards, badges, timeline, project highlights, and call-to-action buttons.
+* Add live links and GitHub links where available.
+* Ensure the portfolio is responsive on mobile, tablet, and desktop.
+* Keep SEO-friendly content and proper headings.
 
-Implement:
+## Suggested Sections in Portfolio
 
-validation,
-loading,
-rate limiting,
-error handling,
-success states.
+1. Hero
+2. About
+3. Skills
+4. Experience
+5. Professional Projects
+6. Personal Projects
+7. Achievements
+8. Certifications
+9. Education
+10. Contact
 
-Success animation:
+## Final Goal
 
-Transmission Successful.
-
----
-
-# MOTION SYSTEM
-
-Use Framer Motion for:
-
-micro interactions,
-hover states,
-reveals,
-layout transitions.
-
-Use GSAP ONLY for:
-
-complex timelines,
-ScrollTrigger,
-pinned sections,
-background systems.
-
-Every interactive element should have motion.
-
-Buttons:
-magnetic hover.
-
-Cards:
-3D tilt.
-
-Inputs:
-focus trails.
-
-Navigation:
-active morph.
-
-Badges:
-pulse.
-
-Links:
-glow traces.
-
-Respect reduced motion.
-
-Maintain 60fps.
-
-Mobile must remain smooth.
-
----
-
-# TECH STACK
-
-Use ONLY:
-
-Next.js App Router
-TypeScript
-Tailwind CSS
-Framer Motion
-GSAP
-@gsap/react
-ScrollTrigger
-Radix UI
-shadcn/ui
-Lucide React
-GraphQL
-REST APIs
-
-NO JavaScript.
-
----
-
-# ARCHITECTURE
-
-Enterprise-grade architecture.
-
-Reusable components.
-
-Feature-based folders.
-
-Typed props.
-
-No monolithic files.
-
-No TODO comments.
-
-Everything production-ready.
-
-Generate ALL files.
-
-Generate COMPLETE code.
-
-Ensure the project compiles successfully without manual fixes.
-
-The final result should feel like:
-
-"A futuristic hacker command center built by an elite full stack engineer."
-
-The portfolio should be unforgettable.
+Update my portfolio so it presents me as a job-ready Software Developer and Full Stack Developer with strong experience in enterprise commerce systems, Next.js, TypeScript, BigCommerce Catalyst, Makeswift, GraphQL, performance optimization, security fixes, and AI-powered application development.

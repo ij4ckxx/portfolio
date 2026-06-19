@@ -63,6 +63,21 @@ const ProjectCard = memo(function ProjectCard({ index, project }: ProjectCardPro
             </span>
           ))}
         </div>
+        {project.links?.length ? (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {project.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-cyber-cyan/35 px-3 py-2 text-xs font-semibold text-cyber-cyan transition hover:bg-cyber-cyan hover:text-black"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       <span className="absolute bottom-4 right-5 font-mono text-6xl font-black text-white/[0.04]">
@@ -141,7 +156,7 @@ export function ProjectsScrollShowcase({ projects }: ProjectsScrollShowcaseProps
             start: "top top",
             end: () => `+=${Math.max(scrollDistance(), window.innerHeight)}`,
             pin: true,
-            scrub: 0.9,
+            scrub: 0.65,
             anticipatePin: 1,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
@@ -182,14 +197,17 @@ export function ProjectsScrollShowcase({ projects }: ProjectsScrollShowcaseProps
   );
 
   return (
-    <div ref={stageRef} className="project-pin-stage mt-8">
-      <div className="mx-auto mb-5 flex max-w-6xl items-center justify-between gap-4 lg:px-4">
-        <p className="font-mono text-xs font-black uppercase tracking-[0.2em] text-white/45">
-          Scroll to scrub project signals
-        </p>
-        <p className="hidden font-mono text-xs font-black uppercase tracking-[0.2em] text-cyber-cyan sm:block">
-          Scrub enabled
-        </p>
+    <div ref={stageRef} className="project-pin-stage">
+      <div className="mx-auto mb-5 max-w-6xl lg:px-4">
+        <div className="flex items-center justify-between gap-4">
+          <p className="section-kicker">Project Subsystems</p>
+          <p className="hidden font-mono text-xs font-black uppercase tracking-[0.2em] text-cyber-cyan sm:block">
+            Vertical scrub
+          </p>
+        </div>
+        <h2 id="projects-title" className="section-title">
+          Scroll-driven holographic panels for the strongest work.
+        </h2>
       </div>
 
       <div className="project-x-viewport">
