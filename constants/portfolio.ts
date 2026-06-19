@@ -14,7 +14,7 @@ export const profile = {
   githubUser: "jegannathan-mp",
   githubAlt: "https://github.com/ij4ckxx",
   linkedin: "https://www.linkedin.com/in/mpjegannathanmech",
-  resume: "/Jegan_Nathan_M_P_Resume.pdf.pdf",
+  resume: "/Jegan_Nathan_M_P_Resume.pdf",
   company: "Arizon Digital - USA",
   location: "Chennai, India",
 };
